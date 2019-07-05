@@ -16,7 +16,7 @@ client.on('ready', () => {
 
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "role-bc")) {
-        if (!message.member.hasPermission('ADMINSTRATOR')) return message.reply(`**You Don't Have**  *ADMINSTRATOR*  **Permission **`).catch(console.error);
+        
     let args = message.content.split(" ").slice(1);
 
     if(!args[0]) {
@@ -107,7 +107,7 @@ if(message.content.startsWith(prefix + 'bc')) {
 
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 
-if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
+
 
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
 
@@ -224,7 +224,7 @@ client.on("message", message => {
 
             if (message.content.startsWith(prefix + "obc")) {
 
-                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
+                         
 
   let args = message.content.split(" ").slice(1);
 
