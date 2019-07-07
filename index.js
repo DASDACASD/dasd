@@ -4,7 +4,7 @@ const client = new Discord.Client();
 
 
 client.on('ready', () => {
- client.user.setGame('LEGENDs ','https://www.twitch.tv/LEGENDs');
+ client.user.setGame('Malicious ','https://www.twitch.tv/Malicious');
   console.log('---------------');
   console.log(' Malicious Bot Is Online')
   console.log('---------------')
@@ -207,8 +207,6 @@ if (message.content === "!help") {
       .addField(`${prefix}bc`, `لارسال راسألة جماعية لجميع اعضاء السيرفر`)
 
       .addField(`${prefix}obc`, `لارسال رسالة جماعية للاون لاين فقط`)
-
-      .addField(`${prefix}bot`, `لروياة معلومات البوت`)
 
   message.author.send({embed});
 
