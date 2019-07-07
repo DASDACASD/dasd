@@ -4,19 +4,19 @@ const client = new Discord.Client();
 
 
 client.on('ready', () => {
- client.user.setGame('Malicious ','https://www.twitch.tv/Malicious');
+ client.user.setGame('LEGENDs FO2 ','https://www.twitch.tv/LEGENDs FO2');
   console.log('---------------');
-  console.log(' Malicious Bot Is Online')
+  console.log(' SHADOW Bot Is Online')
   console.log('---------------')
 });
 	
-   var prefix = "#" ;
+   var prefix = "!" ;
    
    client.on('message' , message => {
 
   if(message.author.bot) return;
   if(message.content.startsWith(prefix + "role-bc")) {
-        
+        if (!message.member.hasPermission('ADMINSTRATOR')) return message.reply(`**You Don't Have**  *ADMINSTRATOR*  **Permission **`).catch(console.error);
     let args = message.content.split(" ").slice(1);
 
     if(!args[0]) {
@@ -50,16 +50,16 @@ client.on('ready', () => {
 });
                
             
-           const adminprefix = "#";
+           const adminprefix = ".";
 
-const devs = ['345386910362894336'];
+const devs = ['482812762020642836'];
 
 client.on('message', message => {
 
   var argresult = message.content.split(` `).slice(1).join(' ');
 
     if (!devs.includes(message.author.id)) return;
-
+LEGENDs FO2
     
 
 if (message.content.startsWith(adminprefix + 'setgame')) {
@@ -103,11 +103,11 @@ client.on('message', message => {
 
    if(!message.channel.guild) return;
 
-if(message.content.startsWith(prefix + 'bc')) {
+if(message.content.startsWith(prefix + 'بعت')) {
 
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 
-
+if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
 
 let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
 
@@ -198,7 +198,7 @@ msg.delete();
 
 client.on("message", (message) => {
 
-if (message.content === "#help") {
+if (message.content === "!help") {
 
     const embed = new Discord.RichEmbed()
 
@@ -224,7 +224,7 @@ client.on("message", message => {
 
             if (message.content.startsWith(prefix + "obc")) {
 
-                         
+                         if (!message.member.hasPermission("ADMINISTRATOR"))  return;
 
   let args = message.content.split(" ").slice(1);
 
@@ -252,4 +252,4 @@ client.on("message", message => {
 
 
 
-client.login(process.env.TOKEN); 
+client.login(process.env.BOT_TOKEN); 
