@@ -10,7 +10,7 @@ client.on('ready', () => {
   console.log('---------------')
 });
 	
-   var prefix = "!" ;
+   var prefix = "#" ;
    
    client.on('message' , message => {
 
@@ -50,7 +50,7 @@ client.on('ready', () => {
 });
                
             
-           const adminprefix = "!";
+           const adminprefix = "#";
 
 const devs = ['482812762020642836'];
 
@@ -198,7 +198,7 @@ msg.delete();
 
 client.on("message", (message) => {
 
-if (message.content === "!help") {
+if (message.content === "#help") {
 
     const embed = new Discord.RichEmbed()
 
@@ -207,6 +207,8 @@ if (message.content === "!help") {
       .addField(`${prefix}bc`, `لارسال راسألة جماعية لجميع اعضاء السيرفر`)
 
       .addField(`${prefix}obc`, `لارسال رسالة جماعية للاون لاين فقط`)
+
+      .addField(`${prefix}bot`, `لروياة معلومات البوت`)
 
   message.author.send({embed});
 
@@ -250,4 +252,4 @@ client.on("message", message => {
 
 
 
-client.login(process.env.BOT_TOKEN); 
+client.login(process.env.BOT_TOKEN); 482812762020642836
