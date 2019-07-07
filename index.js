@@ -52,7 +52,7 @@ client.on('ready', () => {
             
            const adminprefix = "#";
 
-const devs = ['482812762020642836'];
+const devs = ['318705077734998017'];
 
 client.on('message', message => {
 
