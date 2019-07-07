@@ -4,13 +4,13 @@ const client = new Discord.Client();
 
 
 client.on('ready', () => {
- client.user.setGame('Malicious ','https://www.twitch.tv/Malicious');
+ client.user.setGame('LEGENDs ','https://www.twitch.tv/LEGENDs');
   console.log('---------------');
   console.log(' Malicious Bot Is Online')
   console.log('---------------')
 });
 	
-   var prefix = "#" ;
+   var prefix = "!" ;
    
    client.on('message' , message => {
 
@@ -50,9 +50,9 @@ client.on('ready', () => {
 });
                
             
-           const adminprefix = "#";
+           const adminprefix = "!";
 
-const devs = ['345386910362894336'];
+const devs = ['482812762020642836'];
 
 client.on('message', message => {
 
@@ -198,7 +198,7 @@ msg.delete();
 
 client.on("message", (message) => {
 
-if (message.content === "#help") {
+if (message.content === "!help") {
 
     const embed = new Discord.RichEmbed()
 
